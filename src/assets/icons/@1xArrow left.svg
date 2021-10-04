@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>@1xArrow left</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Arrow-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="BG" x="0" y="0" width="24" height="24"></rect>
+        <path d="M10.2777778,7 L5,12 M10.2777778,17 L5,12 L18.3333333,12" id="04.-Arrow-left" stroke="#212121" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+</svg>

@@ -129,10 +129,10 @@ public class MainView extends VerticalLayout implements AppShellConfigurator {
         // ##### LIST PLAYERS ##### //
         List<Player> playerList = new ArrayList<>();
 
-        playerList.add(new Player("ERNAULT", "Alexandre", new Category("Poids Moyen", 75, 80), new Weapon(), new Armor(ArmorType.GAMBISON), 54, 20, true));
-        playerList.add(new Player("DOUCET", "Thibault", new Category("Poids Léger", 63, 68), new Weapon(), new Armor(ArmorType.MAILLES), 24, 6, true));
-        playerList.add(new Player("MOREL", "Alban", new Category("Poids Plume", 57, 62), new Weapon(), new Armor(ArmorType.PLAQUES), 16, 1, false));
-        playerList.add(new Player("BOUTIN", "Florian", new Category("Poids Super-Lourd", 91, 100), new Weapon(), new Armor(ArmorType.GAMBISON), 6, 0, false));
+        playerList.add(new Player("ERNAULT", "Alexandre", new Category("Poids Moyen", 75, 80), new Weapon("Lance"), new Armor(ArmorType.GAMBISON), 54, 20, true));
+        playerList.add(new Player("DOUCET", "Thibault", new Category("Poids Léger", 63, 68), new Weapon("Bâton de mage"), new Armor(ArmorType.MAILLES), 24, 6, true));
+        playerList.add(new Player("MOREL", "Alban", new Category("Poids Plume", 57, 62), new Weapon("Mousquet"), new Armor(ArmorType.PLAQUES), 16, 1, false));
+        playerList.add(new Player("BOUTIN", "Florian", new Category("Poids Super-Lourd", 91, 100), new Weapon("Poings"), new Armor(ArmorType.GAMBISON), 6, 0, false));
 
         Grid<Player> grid = new Grid<>(Player.class);
         Div gridDiv = new Div();

@@ -34,4 +34,9 @@ public class Armor {
         this.armor_type = armor_type;
     }
 
+    @Override
+    public String toString() {
+        return this.armor_type.toString();
+    }
+
 }

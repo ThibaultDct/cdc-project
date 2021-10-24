@@ -12,10 +12,15 @@ public class PlayerService {
 
     public Player createPlayer(String lastname, String firstname, Category category, Weapon weapon, Armor armor,
             int age, int seniority, boolean is_member) {
-        if (age >= 16) {
+        if (is_member) {
             return new Player(lastname, firstname, category, weapon, armor, age, seniority, is_member);
         } else {
-            return null;
+            if (age >= 16) {
+                return new Player(lastname, firstname, category, weapon, armor, age, seniority, is_member);
+            } else {
+                return null;
+            }
+
         }
     }
 

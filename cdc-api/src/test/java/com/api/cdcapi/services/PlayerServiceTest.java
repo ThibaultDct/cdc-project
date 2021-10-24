@@ -47,4 +47,34 @@ public class PlayerServiceTest {
 
     }
 
+    @Test
+    void check_player_adherent_with_age_over_sixteen() {
+
+        Player player = service.createPlayer("MELENCHON", "Jean-Luc", new Category("Poids Moyen", 75, 80),
+                new Weapon("Marteau"), new Armor(ArmorType.GAMBISON), 18, 10, true);
+
+        Assertions.assertNotNull(player);
+
+    }
+
+    @Test
+    void check_player_not_adherent_with_age_over_sixteen() {
+
+        Player player = service.createPlayer("MELENCHON", "Jean-Luc", new Category("Poids Moyen", 75, 80),
+                new Weapon("Marteau"), new Armor(ArmorType.GAMBISON), 24, 10, false);
+
+        Assertions.assertNotNull(player);
+
+    }
+
+    @Test
+    void check_player_not_adherent_with_age_under_sixteen() {
+
+        Player player = service.createPlayer("MELENCHON", "Jean-Luc", new Category("Poids Moyen", 75, 80),
+                new Weapon("Marteau"), new Armor(ArmorType.GAMBISON), 15, 10, false);
+
+        Assertions.assertNull(player);
+
+    }
+
 }

@@ -1,8 +1,10 @@
 package com.api.cdcapi.business;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class Team {
     
@@ -31,5 +33,9 @@ public class Team {
 
     public void setPlayers(Collection<Player> players) {
         this.players = players;
+    }
+
+    public double getPlayersWeightMean() {
+        return this.players.stream().collect(Collectors.averagingDouble(p -> p.getCategory().getHigher_value()));
     }
 }

@@ -54,4 +54,30 @@ public class TeamServiceTest {
         Assertions.assertEquals(2, team2.getPlayers().size());
     }
 
+    @Test
+    void check_team_weight_mean_all_equals() {
+        List<Player> players = new ArrayList<>();
+
+        players.add(new Player("ERNAULT", "Alexandre", new Category("Poids Moyen", 75, 80), new Weapon("Lance"), new Armor(ArmorType.GAMBISON), 54, 20, true));
+        players.add(new Player("DOUCET", "Thibault", new Category("Poids Léger", 75, 80), new Weapon("Bâton de mage"), new Armor(ArmorType.MAILLES), 24, 6, true));
+        players.add(new Player("MOREL", "Alban", new Category("Poids Plume", 75, 80), new Weapon("Mousquet"), new Armor(ArmorType.PLAQUES), 16, 1, false));
+
+        Team team = new Team(players);
+
+        Assertions.assertEquals(80, team.getPlayersWeightMean());
+    }
+
+    @Test
+    void check_team_weight_mean_all_not_equals() {
+        List<Player> players = new ArrayList<>();
+
+        players.add(new Player("ERNAULT", "Alexandre", new Category("Poids Moyen", 40, 60), new Weapon("Lance"), new Armor(ArmorType.GAMBISON), 54, 20, true));
+        players.add(new Player("DOUCET", "Thibault", new Category("Poids Léger", 40, 70), new Weapon("Bâton de mage"), new Armor(ArmorType.MAILLES), 24, 6, true));
+        players.add(new Player("MOREL", "Alban", new Category("Poids Plume", 40, 80), new Weapon("Mousquet"), new Armor(ArmorType.PLAQUES), 16, 1, false));
+
+        Team team = new Team(players);
+
+        Assertions.assertEquals(70, team.getPlayersWeightMean());
+    }
+
 }

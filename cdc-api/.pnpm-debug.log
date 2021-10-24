@@ -1,0 +1,339 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 info pnpm": {
+    "message": "Using hooks from: C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api\\pnpmfile.js",
+    "prefix": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api"
+  },
+  "2 info pnpm": {
+    "message": "readPackage hook is declared. Manifests of dependencies might get overridden",
+    "prefix": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api"
+  },
+  "3 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "no-name",
+      "license": "UNLICENSED",
+      "dependencies": {
+        "@polymer/iron-icon": "3.0.1",
+        "@polymer/iron-list": "3.1.0",
+        "@polymer/polymer": "3.2.0",
+        "@vaadin/flow-frontend": "./target/flow-frontend",
+        "@vaadin/form": "./target/flow-frontend/form",
+        "@vaadin/router": "1.7.4",
+        "@vaadin/vaadin-accordion": "21.0.2",
+        "@vaadin/vaadin-app-layout": "21.0.2",
+        "@vaadin/vaadin-avatar": "21.0.2",
+        "@vaadin/vaadin-button": "21.0.2",
+        "@vaadin/vaadin-checkbox": "21.0.2",
+        "@vaadin/vaadin-combo-box": "21.0.2",
+        "@vaadin/vaadin-context-menu": "21.0.2",
+        "@vaadin/vaadin-core-shrinkwrap": "21.0.2",
+        "@vaadin/vaadin-custom-field": "21.0.2",
+        "@vaadin/vaadin-date-picker": "21.0.2",
+        "@vaadin/vaadin-date-time-picker": "21.0.2",
+        "@vaadin/vaadin-details": "21.0.2",
+        "@vaadin/vaadin-dialog": "21.0.2",
+        "@vaadin/vaadin-form-layout": "21.0.2",
+        "@vaadin/vaadin-grid": "21.0.2",
+        "@vaadin/vaadin-icon": "21.0.2",
+        "@vaadin/vaadin-icons": "21.0.2",
+        "@vaadin/vaadin-item": "21.0.2",
+        "@vaadin/vaadin-list-box": "21.0.2",
+        "@vaadin/vaadin-login": "21.0.2",
+        "@vaadin/vaadin-lumo-styles": "21.0.2",
+        "@vaadin/vaadin-material-styles": "21.0.2",
+        "@vaadin/vaadin-menu-bar": "21.0.2",
+        "@vaadin/vaadin-messages": "21.0.2",
+        "@vaadin/vaadin-notification": "21.0.2",
+        "@vaadin/vaadin-ordered-layout": "21.0.2",
+        "@vaadin/vaadin-progress-bar": "21.0.2",
+        "@vaadin/vaadin-radio-button": "21.0.2",
+        "@vaadin/vaadin-select": "21.0.2",
+        "@vaadin/vaadin-split-layout": "21.0.2",
+        "@vaadin/vaadin-tabs": "21.0.2",
+        "@vaadin/vaadin-template-renderer": "21.0.2",
+        "@vaadin/vaadin-text-field": "21.0.2",
+        "@vaadin/vaadin-time-picker": "21.0.2",
+        "@vaadin/vaadin-upload": "21.0.2",
+        "@vaadin/vaadin-virtual-list": "21.0.2",
+        "construct-style-sheets-polyfill": "2.4.16",
+        "lit": "2.0.0-rc.4"
+      },
+      "devDependencies": {
+        "@types/validator": "13.1.0",
+        "@vaadin/application-theme-plugin": "./target/plugins/application-theme-plugin",
+        "@vaadin/stats-plugin": "./target/plugins/stats-plugin",
+        "@vaadin/theme-live-reload-plugin": "./target/plugins/theme-live-reload-plugin",
+        "@vaadin/theme-loader": "./target/plugins/theme-loader",
+        "chokidar": "^3.5.0",
+        "compression-webpack-plugin": "4.0.1",
+        "css-loader": "4.2.1",
+        "extra-watch-webpack-plugin": "1.0.3",
+        "extract-loader": "5.1.0",
+        "file-loader": "6.2.0",
+        "fork-ts-checker-webpack-plugin": "6.2.1",
+        "glob": "7.1.6",
+        "html-webpack-plugin": "4.5.1",
+        "lit-css-loader": "0.1.0",
+        "loader-utils": "2.0.0",
+        "ts-loader": "8.0.12",
+        "typescript": "4.3.3",
+        "validator": "13.1.17",
+        "webpack": "4.46.0",
+        "webpack-cli": "3.3.12",
+        "webpack-dev-server": "3.11.0",
+        "webpack-manifest-plugin": "3.0.0",
+        "webpack-merge": "4.2.2",
+        "workbox-core": "6.2.0",
+        "workbox-precaching": "6.2.0",
+        "workbox-webpack-plugin": "6.2.0"
+      },
+      "vaadin": {
+        "dependencies": {
+          "@polymer/iron-icon": "3.0.1",
+          "@polymer/iron-list": "3.1.0",
+          "@polymer/polymer": "3.2.0",
+          "@vaadin/router": "1.7.4",
+          "@vaadin/vaadin-accordion": "21.0.2",
+          "@vaadin/vaadin-app-layout": "21.0.2",
+          "@vaadin/vaadin-avatar": "21.0.2",
+          "@vaadin/vaadin-button": "21.0.2",
+          "@vaadin/vaadin-checkbox": "21.0.2",
+          "@vaadin/vaadin-combo-box": "21.0.2",
+          "@vaadin/vaadin-context-menu": "21.0.2",
+          "@vaadin/vaadin-core-shrinkwrap": "21.0.2",
+          "@vaadin/vaadin-custom-field": "21.0.2",
+          "@vaadin/vaadin-date-picker": "21.0.2",
+          "@vaadin/vaadin-date-time-picker": "21.0.2",
+          "@vaadin/vaadin-details": "21.0.2",
+          "@vaadin/vaadin-dialog": "21.0.2",
+          "@vaadin/vaadin-form-layout": "21.0.2",
+          "@vaadin/vaadin-grid": "21.0.2",
+          "@vaadin/vaadin-icon": "21.0.2",
+          "@vaadin/vaadin-icons": "21.0.2",
+          "@vaadin/vaadin-item": "21.0.2",
+          "@vaadin/vaadin-list-box": "21.0.2",
+          "@vaadin/vaadin-login": "21.0.2",
+          "@vaadin/vaadin-lumo-styles": "21.0.2",
+          "@vaadin/vaadin-material-styles": "21.0.2",
+          "@vaadin/vaadin-menu-bar": "21.0.2",
+          "@vaadin/vaadin-messages": "21.0.2",
+          "@vaadin/vaadin-notification": "21.0.2",
+          "@vaadin/vaadin-ordered-layout": "21.0.2",
+          "@vaadin/vaadin-progress-bar": "21.0.2",
+          "@vaadin/vaadin-radio-button": "21.0.2",
+          "@vaadin/vaadin-select": "21.0.2",
+          "@vaadin/vaadin-split-layout": "21.0.2",
+          "@vaadin/vaadin-tabs": "21.0.2",
+          "@vaadin/vaadin-template-renderer": "21.0.2",
+          "@vaadin/vaadin-text-field": "21.0.2",
+          "@vaadin/vaadin-time-picker": "21.0.2",
+          "@vaadin/vaadin-upload": "21.0.2",
+          "@vaadin/vaadin-virtual-list": "21.0.2",
+          "construct-style-sheets-polyfill": "2.4.16",
+          "lit": "2.0.0-rc.4"
+        },
+        "devDependencies": {
+          "@types/validator": "13.1.0",
+          "chokidar": "^3.5.0",
+          "compression-webpack-plugin": "4.0.1",
+          "css-loader": "4.2.1",
+          "extra-watch-webpack-plugin": "1.0.3",
+          "extract-loader": "5.1.0",
+          "file-loader": "6.2.0",
+          "fork-ts-checker-webpack-plugin": "6.2.1",
+          "glob": "7.1.6",
+          "html-webpack-plugin": "4.5.1",
+          "lit-css-loader": "0.1.0",
+          "loader-utils": "2.0.0",
+          "ts-loader": "8.0.12",
+          "typescript": "4.3.3",
+          "validator": "13.1.17",
+          "webpack": "4.46.0",
+          "webpack-cli": "3.3.12",
+          "webpack-dev-server": "3.11.0",
+          "webpack-manifest-plugin": "3.0.0",
+          "webpack-merge": "4.2.2",
+          "workbox-core": "6.2.0",
+          "workbox-precaching": "6.2.0",
+          "workbox-webpack-plugin": "6.2.0"
+        },
+        "hash": "6e1f13f77d291f9a92f848c04a9bac062e371fc4938466a0df67fd21e9d07fef"
+      }
+    },
+    "prefix": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api"
+  },
+  "4 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "C:\\Users\\Thibault\\.pnpm-store\\v3",
+    "virtualStoreDir": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api\\node_modules\\.pnpm"
+  },
+  "5 debug pnpm:stage": {
+    "prefix": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "stage": "resolution_started"
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/validator/13.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/validator",
+      "rawSpec": "13.1.0"
+    }
+  },
+  "7 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/validator/13.1.0",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/extra-watch-webpack-plugin/1.0.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "extra-watch-webpack-plugin",
+      "rawSpec": "1.0.3"
+    }
+  },
+  "9 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/extra-watch-webpack-plugin/1.0.3",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/extract-loader/5.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "extract-loader",
+      "rawSpec": "5.1.0"
+    }
+  },
+  "11 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/extract-loader/5.1.0",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "12 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/compression-webpack-plugin/4.0.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "compression-webpack-plugin",
+      "rawSpec": "4.0.1"
+    }
+  },
+  "13 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/compression-webpack-plugin/4.0.1",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "14 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/css-loader/4.2.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "css-loader",
+      "rawSpec": "4.2.1"
+    }
+  },
+  "15 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/css-loader/4.2.1",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/file-loader/6.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "file-loader",
+      "rawSpec": "6.2.0"
+    }
+  },
+  "17 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/file-loader/6.2.0",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "18 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/glob/7.1.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "glob",
+      "rawSpec": "7.1.6"
+    }
+  },
+  "19 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/glob/7.1.6",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "20 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/lit-css-loader/0.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "lit-css-loader",
+      "rawSpec": "0.1.0"
+    }
+  },
+  "21 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/lit-css-loader/0.1.0",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "22 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/loader-utils/2.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "loader-utils",
+      "rawSpec": "2.0.0"
+    }
+  },
+  "23 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/loader-utils/2.0.0",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "24 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/html-webpack-plugin/4.5.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "html-webpack-plugin",
+      "rawSpec": "4.5.1"
+    }
+  },
+  "25 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/html-webpack-plugin/4.5.1",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "26 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/fork-ts-checker-webpack-plugin/6.2.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "fork-ts-checker-webpack-plugin",
+      "rawSpec": "6.2.1"
+    }
+  },
+  "27 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/fork-ts-checker-webpack-plugin/6.2.1",
+    "requester": "C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api",
+    "status": "resolved"
+  },
+  "28 debug pnpm:_dependency_resolved": {
+    "resolution": "link:target/plugins/application-theme-plugin",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/application-theme-plugin",
+      "rawSpec": "./target/plugins/application-theme-plugin"
+    }
+  },
+  "29 error pnpm": {
+    "message": {
+      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+      "pkgsStack": []
+    },
+    "err": {
+      "name": "Error",
+      "message": "No package.json (or package.yaml, or package.json5) was found in \"C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api\\target\\plugins\\stats-plugin\".",
+      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+      "stack": "Error: No package.json (or package.yaml, or package.json5) was found in \"C:\\Users\\Thibault\\Documents\\Developpement\\cdc-project\\cdc-api\\target\\plugins\\stats-plugin\".\n    at readProjectManifest (C:\\Users\\Thibault\\AppData\\Roaming\\npm-cache\\_npx\\14264\\node_modules\\pnpm\\dist\\pnpm.js:43174:11)\n    at async Object.readProjectManifestOnly (C:\\Users\\Thibault\\AppData\\Roaming\\npm-cache\\_npx\\14264\\node_modules\\pnpm\\dist\\pnpm.js:43178:24)\n    at async Object.resolveLocal [as default] (C:\\Users\\Thibault\\AppData\\Roaming\\npm-cache\\_npx\\14264\\node_modules\\pnpm\\dist\\pnpm.js:72178:33)\n    at async Object.resolve (C:\\Users\\Thibault\\AppData\\Roaming\\npm-cache\\_npx\\14264\\node_modules\\pnpm\\dist\\pnpm.js:73098:307)\n    at async run (C:\\Users\\Thibault\\AppData\\Roaming\\npm-cache\\_npx\\14264\\node_modules\\pnpm\\dist\\pnpm.js:83441:21)"
+    }
+  }
+}

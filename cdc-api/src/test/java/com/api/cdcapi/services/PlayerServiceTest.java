@@ -27,4 +27,24 @@ public class PlayerServiceTest {
 
     }
 
+    @Test
+    void check_player_created_with_age_under_sixteen() {
+
+        Player player = service.createPlayer("MELENCHON", "Jean-Luc", new Category("Poids Moyen", 75, 80),
+                new Weapon("Marteau"), new Armor(ArmorType.GAMBISON), 15, 10, true);
+
+        Assertions.assertNull(player);
+
+    }
+
+    @Test
+    void check_player_created_with_age_equals_to_sixteen() {
+
+        Player player = service.createPlayer("MELENCHON", "Jean-Luc", new Category("Poids Moyen", 75, 80),
+                new Weapon("Marteau"), new Armor(ArmorType.GAMBISON), 16, 10, true);
+
+        Assertions.assertNotNull(player);
+
+    }
+
 }

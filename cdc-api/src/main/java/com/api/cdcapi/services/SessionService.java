@@ -48,8 +48,6 @@ public class SessionService {
 
         session.getCurrentManche().setMancheTeams(teams);
 
-
-
     }
 
     public void playCurrentSessionManche(Session session){

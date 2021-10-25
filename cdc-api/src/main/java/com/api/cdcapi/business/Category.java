@@ -58,6 +58,5 @@ public class Category {
         sb.append(this.label).append(" (").append(this.lower_value).append("kg -> ").append(this.higher_value).append("kg)");
         return sb.toString();
     }
-
-
+    
 }

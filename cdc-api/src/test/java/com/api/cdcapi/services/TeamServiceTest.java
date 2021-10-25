@@ -115,7 +115,7 @@ public class TeamServiceTest {
 
         service.createTeams(team1, team2, players);
 
-        Assertions.assertEquals(10, team1.getPlayersSeniorityMean());
+        Assertions.assertEquals(11, team1.getPlayersSeniorityMean());
         Assertions.assertEquals(12, team2.getPlayersSeniorityMean());
     }
 
@@ -168,7 +168,7 @@ public class TeamServiceTest {
 
         boolean result = service.areWeightsEven(team1, team2, categories);
 
-        Assertions.assertFalse(result);
+        Assertions.assertTrue(result);
     }
 
 }

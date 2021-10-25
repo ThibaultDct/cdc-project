@@ -28,9 +28,9 @@ public class TeamService {
             playerList.sort(sorting);
             toPlace = playerList.get(0);
             if (team1.getPlayers().size() <= team2.getPlayers().size()) {
-                team1.addPlayer(players.get(0));
+                team1.addPlayer(toPlace);
             } else {
-                team2.addPlayer(players.get(0));
+                team2.addPlayer(toPlace);
             }
             playerList.remove(toPlace);
         }

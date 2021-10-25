@@ -98,7 +98,6 @@ public class SessionServiceTest {
         
         Assertions.assertEquals(5,session.getCurrentManche().getTotalNumberOfPlayers());
     }
-
     
     @Test
     void check_session_current_manches_is_still_last_when_all_manche_are_played(){
@@ -123,7 +122,27 @@ public class SessionServiceTest {
         
     }
         
+    @Test
+    void updateplayerinchange(){
+
+        List<Player> players = new ArrayList<>();
+        Player p1 = new Player("ERNAULT", "Alexandre", new Category("Poids Moyen", 75, 80), new Weapon("Lance"), new Armor(ArmorType.GAMBISON), 54, 20, true);
+        players.add(p1);
+        players.add(new Player("DOUCET", "Thibault", new Category("Poids Léger", 63, 68), new Weapon("Bâton de mage"), new Armor(ArmorType.MAILLES), 24, 6, true));
+        players.add(new Player("MOREL", "Alban", new Category("Poids Plume", 57, 62), new Weapon("Mousquet"), new Armor(ArmorType.PLAQUES), 16, 1, false));
+        players.add(new Player("BOUTIN", "Florian", new Category("Poids Super-Lourd", 91, 100), new Weapon("Poings"), new Armor(ArmorType.GAMBISON), 6, 0, false));
 
 
+
+        Session session = sessionService.createSession(5, players);
+        sessionService.addPlayersToCurrentManche(session);
+
+        session.updatePlayer(p1, new Armor(ArmorType.MAILLES));
+
+        sessionService.playCurrentSessionManche(session);
+
+        Assertions.assertEquals(ArmorType.GAMBISON, p1.getArmor().getArmor_type());
+
+    }
     
 }

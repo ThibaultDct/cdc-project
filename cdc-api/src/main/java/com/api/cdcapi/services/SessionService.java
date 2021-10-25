@@ -1,5 +1,6 @@
 package com.api.cdcapi.services;
 
+import com.api.cdcapi.business.enums.ArmorType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +32,14 @@ public class SessionService {
 
     public void addPlayersToCurrentManche(Session session){
 
+        List<ArmorType> tampon = new ArrayList<>();
+
+        for (int i = 0; i < session.getSessionPlayers().size()-1; i++){
+            tampon.add(session.getSessionPlayers().get(i).getArmor().getArmor_type());
+        }
+
+        session.setListTampon(tampon);
+
         TeamService ts = new TeamService();
 
         List<Team> teams = session.getCurrentManche().getMancheTeams();
@@ -38,9 +47,17 @@ public class SessionService {
         ts.createTeams(teams.get(0), teams.get(1), session.getSessionPlayers());
 
         session.getCurrentManche().setMancheTeams(teams);
+
     }
 
     public void playCurrentSessionManche(Session session){
-        session.nextManche();        
+        for (int i = 0; i < session.getSessionPlayers().size()-1; i++) {
+            if(!session.getSessionPlayers().get(i).getArmor().getArmor_type().equals(session.getListTampon().get(i))){
+                session.getSessionPlayers().get(i).getArmor().setArmor_type(session.getListTampon().get(i));
+            }
+        }
+
+        session.nextManche();
     }
+
 }

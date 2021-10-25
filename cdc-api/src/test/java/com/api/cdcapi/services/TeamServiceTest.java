@@ -120,4 +120,22 @@ public class TeamServiceTest {
         Assertions.assertEquals(12, team2.getPlayersSeniorityMean());
     }
 
+    @Test
+    void check_teams_weights_are_in_same_category_when_same_weights() {
+        List<Player> players = new ArrayList<>();
+
+        players.add(new Player("ERNAULT", "Alexandre", new Category("Poids Moyen", 40, 70), new Weapon("Lance"), new Armor(ArmorType.GAMBISON), 54, 10, true));
+        players.add(new Player("DOUCET", "Thibault", new Category("Poids Léger", 40, 70), new Weapon("Bâton de mage"), new Armor(ArmorType.MAILLES), 24, 11, true));
+        players.add(new Player("MOREL", "Alban", new Category("Poids Plume", 40, 70), new Weapon("Mousquet"), new Armor(ArmorType.PLAQUES), 16, 12, false));
+        players.add(new Player("MACRON", "Emmanuel", new Category("Poids Plume", 40, 70), new Weapon("Taxes"), new Armor(ArmorType.PLAQUES), 16, 13, false));
+
+        Team team1 = new Team();
+        Team team2 = new Team();
+
+        service.createTeams(team1, team2, players);
+
+        Assertions.assertEquals(70, team1.getPlayersWeightMean());
+        Assertions.assertEquals(70, team2.getPlayersWeightMean());
+    }
+
 }

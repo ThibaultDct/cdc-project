@@ -74,13 +74,6 @@ public class Session {
         this.players = newPlayers;      
     }
 
-    public void updatePlayer(Player player, Armor armorType){
-        if (player.getArmor() != armorType){
-            player.setArmor(armorType);
-        }
-
-    }
-
     public Manche getCurrentManche(){
         return this.getSessionManches().get(this.currentManche-1);
     }

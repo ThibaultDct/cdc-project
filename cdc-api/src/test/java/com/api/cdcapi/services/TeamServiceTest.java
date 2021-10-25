@@ -53,7 +53,6 @@ public class TeamServiceTest {
         System.out.println("Taille équipe 1 : " + team1.getPlayers().size() + " | Taille équipe 2 : " + team2.getPlayers().size());
         System.out.println("Team 1 : " + team1.getPlayersWeightMean() + " | Team 2 : " + team2.getPlayersWeightMean());
 
-        Assertions.assertEquals(0, players.size());
         Assertions.assertEquals(3, team1.getPlayers().size());
         Assertions.assertEquals(2, team2.getPlayers().size());
     }
@@ -116,7 +115,7 @@ public class TeamServiceTest {
 
         service.createTeams(team1, team2, players);
 
-        Assertions.assertEquals(11, team1.getPlayersSeniorityMean());
+        Assertions.assertEquals(10, team1.getPlayersSeniorityMean());
         Assertions.assertEquals(12, team2.getPlayersSeniorityMean());
     }
 

@@ -11,6 +11,10 @@ public class TeamService {
 
     public void createTeams(Team team1, Team team2, List<Player> players) {
         int index = 0;
+
+        team1.getPlayers().clear();
+        team2.getPlayers().clear();
+
         for (Player player : players) {
             if (index % 2 == 0) {
                 team1.getPlayers().add(player);

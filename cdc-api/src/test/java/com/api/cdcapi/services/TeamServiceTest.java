@@ -123,19 +123,53 @@ public class TeamServiceTest {
     @Test
     void check_teams_weights_are_in_same_category_when_same_weights() {
         List<Player> players = new ArrayList<>();
+        List<Category> categories = new ArrayList<>();
 
         players.add(new Player("ERNAULT", "Alexandre", new Category("Poids Moyen", 40, 70), new Weapon("Lance"), new Armor(ArmorType.GAMBISON), 54, 10, true));
         players.add(new Player("DOUCET", "Thibault", new Category("Poids Léger", 40, 70), new Weapon("Bâton de mage"), new Armor(ArmorType.MAILLES), 24, 11, true));
         players.add(new Player("MOREL", "Alban", new Category("Poids Plume", 40, 70), new Weapon("Mousquet"), new Armor(ArmorType.PLAQUES), 16, 12, false));
         players.add(new Player("MACRON", "Emmanuel", new Category("Poids Plume", 40, 70), new Weapon("Taxes"), new Armor(ArmorType.PLAQUES), 16, 13, false));
 
+        categories.add(new Category("Poids Mouche", 0, 52));
+        categories.add(new Category("Poids Plume", 53, 57));
+        categories.add(new Category("Poids Léger", 58, 63));
+        categories.add(new Category("Poids Welter", 64, 69));
+        categories.add(new Category("Poids Moyen", 70, 75));
+        categories.add(new Category("Poids Mi-Lourd", 76, 81));
+        categories.add(new Category("Poids Lourd", 82, 91));
+        categories.add(new Category("Poids Super-Lourd", 92, 100));
+
         Team team1 = new Team();
         Team team2 = new Team();
 
         service.createTeams(team1, team2, players);
 
-        Assertions.assertEquals(70, team1.getPlayersWeightMean());
-        Assertions.assertEquals(70, team2.getPlayersWeightMean());
+        boolean result = service.areWeightsEven(team1, team2, categories);
+
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    void check_teams_weights_are_in_same_category_when_not_same_weights() {
+        List<Player> players = new ArrayList<>();
+        List<Category> categories = new ArrayList<>();
+
+        players.add(new Player("ERNAULT", "Alexandre", new Category("Poids Moyen", 40, 70), new Weapon("Lance"), new Armor(ArmorType.GAMBISON), 54, 10, true));
+        players.add(new Player("DOUCET", "Thibault", new Category("Poids Léger", 40, 70), new Weapon("Bâton de mage"), new Armor(ArmorType.MAILLES), 24, 11, true));
+        players.add(new Player("MOREL", "Alban", new Category("Poids Plume", 40, 70), new Weapon("Mousquet"), new Armor(ArmorType.PLAQUES), 16, 12, false));
+        players.add(new Player("MACRON", "Emmanuel", new Category("Poids Plume", 40, 100), new Weapon("Taxes"), new Armor(ArmorType.PLAQUES), 16, 13, false));
+
+        categories.add(new Category("Poids Mouche", 69, 71));
+        categories.add(new Category("Poids Plume", 75, 100));
+
+        Team team1 = new Team();
+        Team team2 = new Team();
+
+        service.createTeams(team1, team2, players);
+
+        boolean result = service.areWeightsEven(team1, team2, categories);
+
+        Assertions.assertFalse(result);
     }
 
 }

@@ -1,0 +1,86 @@
+package com.api.cdcapi.business;
+
+import com.api.cdcapi.business.enums.ArmorType;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.UUID;
+
+public class Session {
+
+    private UUID session_id;
+    private List<Manche> manches = new ArrayList<>();
+    private List<Player> players = new ArrayList<>();
+    private Integer currentManche;
+    private List<ArmorType> listTampon = new ArrayList<>();
+    
+    
+    public Session(List<Manche> manches, List<Player> players, Integer currentManche, List<ArmorType> listTampon){
+        this.session_id = UUID.randomUUID();
+        this.manches = manches;
+        this.players = players;
+        this.currentManche = currentManche;
+        this.listTampon = listTampon;
+    }
+    public Session(List<Manche> manches, List<Player> players){
+        this(manches, players, 1, new ArrayList<ArmorType>());
+    }
+
+    public List<ArmorType> getListTampon() {
+        return listTampon;
+    }
+
+    public void setListTampon(List<ArmorType> listTampon) {
+        this.listTampon = listTampon;
+    }
+
+    public UUID getSession_id() {
+        return this.session_id;
+    }
+
+    public void setSession_id(UUID session_id) {
+        this.session_id = session_id;
+    }
+
+    public List<Manche> getSessionManches(){
+        return this.manches;    
+    }
+
+    public void setSessionPlayers(List<Manche> newManches){
+        this.manches = newManches;      
+    }
+
+    public List<Player> getSessionPlayers(){
+        return this.players;    
+    }
+
+    public void addNewPlayer(Player player){
+        this.players.add(player);
+    }
+
+    public void removePlayer(Player player){
+        this.players.remove(player);
+    }
+
+    public void setSessionManches(List<Player> newPlayers){
+        this.players = newPlayers;      
+    }
+
+    public void updatePlayer(Player player, Armor armorType){
+        if (player.getArmor() != armorType){
+            player.setArmor(armorType);
+        }
+
+    }
+
+    public Manche getCurrentManche(){
+        return this.getSessionManches().get(this.currentManche);
+    }
+
+    public void nextManche(){
+        this.currentManche+=1;
+    }
+    
+}

@@ -17,6 +17,9 @@ public class TeamService {
     public void createTeams(Team team1, Team team2, List<Player> players) throws IllegalArgumentException {
         Comparator<Player> sorting = Comparator.comparing(Player::getAverageWeight).thenComparing(Player::getSeniority);
         Player toPlace;
+  
+        team1.getPlayers().clear();
+        team2.getPlayers().clear();
 
         while (!players.isEmpty()) {
             players.sort(sorting);

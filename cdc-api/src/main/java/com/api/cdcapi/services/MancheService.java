@@ -16,7 +16,8 @@ public class MancheService {
     public List<Manche> createManches(Integer manchesNumber, List<Team> teams){
         List<Manche> manches = new ArrayList<>();
 
-        for (int i = 0; i < manchesNumber; i++) {
+        for (int i = 1; i <= manchesNumber; i++) {
+            System.out.println(i);
             manches.add(new Manche(teams, i));     
         }
         return manches;        

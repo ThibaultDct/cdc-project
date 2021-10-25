@@ -38,7 +38,6 @@ public class SessionService {
         ts.createTeams(teams.get(0), teams.get(1), session.getSessionPlayers());
 
         session.getCurrentManche().setMancheTeams(teams);
-
     }
 
     public void playCurrentSessionManche(Session session){

@@ -37,7 +37,7 @@ public class Session {
         return this.manches;    
     }
 
-    public void setSessionPlayers(List<Manche> newManches){
+    public void setSessionManches(List<Manche> newManches){
         this.manches = newManches;      
     }
 
@@ -53,16 +53,24 @@ public class Session {
         this.players.remove(player);
     }
 
-    public void setSessionManches(List<Player> newPlayers){
+    public void updatePlayer(Player player, Armor armortype){
+        if (player.getArmor() != armortype){
+            player.setArmor(armortype);
+        }
+    }
+
+    public void setSessionPlayers(List<Player> newPlayers){
         this.players = newPlayers;      
     }
 
     public Manche getCurrentManche(){
-        return this.getSessionManches().get(this.currentManche);
+        return this.getSessionManches().get(this.currentManche-1);
     }
 
     public void nextManche(){
-        this.currentManche+=1;
+        if (this.currentManche < this.getSessionManches().size()){
+            this.currentManche+=1;
+        }
     }
     
 }

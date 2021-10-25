@@ -168,7 +168,7 @@ public class TeamServiceTest {
 
         boolean result = service.areWeightsEven(team1, team2, categories);
 
-        Assertions.assertTrue(result);
+        Assertions.assertFalse(result);
     }
 
 }

@@ -107,7 +107,11 @@ public class Player {
         this.is_member = is_member;
     }
 
+    public double getAverageWeight() { return (this.getCategory().getHigher_value() - this.getCategory().getLower_value()) / 2; }
 
-    
+    @Override
+    public String toString() {
+        return this.getLastname() + " " + this.getFirstname();
+    }
 
 }
